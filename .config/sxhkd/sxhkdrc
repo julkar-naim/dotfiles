@@ -1,0 +1,83 @@
+
+#                        ██      ██          ██               
+#                       ░██     ░██         ░██               
+#         ██████ ██   ██░██     ░██  ██     ░██ ██████  █████ 
+#        ██░░░░ ░░██ ██ ░██████ ░██ ██   ██████░░██░░█ ██░░░██
+#       ░░█████  ░░███  ░██░░░██░████   ██░░░██ ░██ ░ ░██  ░░ 
+#     ██ ░░░░░██  ██░██ ░██  ░██░██░██ ░██  ░██ ░██   ░██   ██
+#    ░██ ██████  ██ ░░██░██  ░██░██░░██░░██████░███   ░░█████ 
+#    ░░ ░░░░░░  ░░   ░░ ░░   ░░ ░░  ░░  ░░░░░░ ░░░     ░░░░░  
+
+##
+# wm/de independent hotkeys
+#
+ctrl + shift + x
+    i3exit $(echo -e "lock\nshutdown\nreboot\nsuspend\nhibernate" | dmenu)
+
+ctrl + super + p
+    clipmenu
+ctrl + shift + u
+    st -e /home/naim/.script/pacfzf
+ctrl + shift + y
+    st -e /home/naim/.script/yayfzf
+
+#terminal emulator
+alt + Return
+    kitty
+#     /* st */
+
+# program launcher
+alt + p
+    dmenu_run -i -l 10 -p "Run"
+
+# make sxhkd reload its configuration files:
+alt + Escape
+	pkill -USR1 -x sxhkd && pkill -USR1 -x bspc
+
+# alt + shift + p
+#     pkill -USR1 polybar
+
+#sound control
+ctrl + alt + shift + {minus,equal}
+    sound {-,+}10%
+
+alt + {minus,equal}
+    amixer set Master 5%{-,+} 
+
+# ctrl + shift + m
+#     amixer -q -D pulse sset Master toggle ; ~/.scripts/muteNotification.sh
+alt + F9
+    pavucontrol&
+
+alt + F1 
+    chromium
+
+#screenshot 
+
+# Print
+#     scrot ~/screenshot/$(date --iso-8601='seconds').png; notify-send "screenshot has been taken" 
+
+#screen lock and power related stuffs
+# super + l
+#     xflock4
+# alt + shift + s
+#     i3exit $(cat ~/.scripts/exit | dmenu)&
+
+# app shortcut
+
+alt + F2
+    thunar
+alt + F3
+    caprine
+alt + F4
+	discord
+
+# pdf opener
+
+alt + F5
+    zathura ~/../mznaim/books/$(ls /home/mznaim/books| dmenu -i -l 15)&
+
+# key bindings for rhythmbox music player
+
+super + {space, n, b, minus, equal}
+    rhythmbox-client { --play-pause, --next, --previous , --volume-down, --volume-up}
