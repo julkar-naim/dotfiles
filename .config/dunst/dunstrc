@@ -1,5 +1,5 @@
 [global]
-    font = Ubuntu 10
+    font = Noto Sans Bengali UI Thin 10
 
     # Allow a small subset of html markup in notifications and formats:
     #   <b>bold</b>
@@ -127,7 +127,7 @@
     padding = 8
 
     # Horizontal padding.
-    horizontal_padding = 8
+    horizontal_padding = 20
 
     # Define a color for the separator.
     # possible values are:
@@ -155,8 +155,9 @@
     icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/:/usr/share/icons/hicolor/16x16/apps/
 
 [frame]
-    width = 2
-    color = "#4d679a"
+    width = 0
+    # color = "#4d679a"
+    color = "#282c34"
 
 [shortcuts]
 
@@ -182,18 +183,21 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#383a3b"
-    foreground = "#ffffff"
+    /* background = "#383a3b" */
+    background = "#162832"
+    /* foreground = "#ffffff" */
+    foreground = "#dbdbdb"
     timeout = 10
 
 [urgency_normal]
-    background = "#383a3b"
-    foreground = "#ffffff"
+    background = "#162832"
+    foreground = "#dbdbdb"
     timeout = 10
 
 [urgency_critical]
-    background = "#383a3b"
-    foreground = "#ffffff"
+    /* background = "#383a3b" */
+    background = "#282c34"
+    foreground = "#dbdbdb"
     timeout = 0
 
 
