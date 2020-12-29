@@ -19,6 +19,7 @@ config config --local status.showUntrackedFiles no
 alias bc='vim ~/.config/bspwm/bspwmrc'
 alias sx='vim ~/.config/sxhkd/sxhkdrc'
 alias pc='vim ~/.config/polybar/config'
+alias vim='nvim'
 
 
 banner () {
