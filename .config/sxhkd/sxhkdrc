@@ -12,7 +12,10 @@
 # wm/de independent hotkeys
 #
 ctrl + shift + x
-    i3exit $(echo -e "lock\nshutdown\nreboot\nsuspend\nhibernate" | dmenu)
+    $HOME/.script/power.sh
+# lock screen with blur lock
+ctrl + shift + l
+    $HOME/.script/lock.sh
 
 ctrl + super + p
     clipmenu
@@ -32,10 +35,10 @@ alt + p
 
 # make sxhkd reload its configuration files:
 alt + Escape
-	pkill -USR1 -x sxhkd && pkill -USR1 -x bspc
+	pkill -USR1 -x sxhkd && pkill -USR1 -x bspc && pkill -USR1 -x picom
 
-# alt + shift + p
-#     pkill -USR1 polybar
+alt + shift + p
+    pkill -USR1 polybar
 
 #sound control
 ctrl + alt + shift + {minus,equal}
@@ -81,3 +84,12 @@ alt + F5
 
 super + {space, n, b, minus, equal}
     rhythmbox-client { --play-pause, --next, --previous , --volume-down, --volume-up}
+
+
+
+
+
+
+# testing
+
+

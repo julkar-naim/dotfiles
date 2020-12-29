@@ -1,33 +1,4 @@
 #
-# wm independent hotkeys
-#
-ctrl + shift + x
-    i3exit $(echo -e "lock\nshutdown\nreboot\nsuspend\nhibernate" | dmenu)
-
-ctrl + shift + d
-    dmoji
-ctrl + super + p
-    clipmenu
-super + p
-    st -e /home/naim/.script/pacfzf
-super + y
-    st -e /home/naim/.script/yayfzf
-# terminal emulator
-alt + Return
-    kitty
-    /* st */
-
-# program launcher
-alt + p
-    dmenu_run -i -l 10 -p "Run"
-
-# make sxhkd reload its configuration files:
-alt + Escape
-	pkill -USR1 -x sxhkd && pkill -USR1 -x bspc
-alt + shift + p
-    pkill -USR1 polybar
-
-#
 # bspwk hotkeys
 #
 
