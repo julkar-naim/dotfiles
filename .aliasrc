@@ -16,6 +16,9 @@ alias grep='grep --color=auto'
 alias clip='xsel -ib'
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 config config --local status.showUntrackedFiles no
+alias bc='vim ~/.config/bspwm/bspwmrc'
+alias sx='vim ~/.config/sxhkd/sxhkdrc'
+alias pc='vim ~/.config/polybar/config'
 
 
 banner () {

@@ -20,9 +20,9 @@ ctrl + shift + l
 ctrl + super + p
     clipmenu
 ctrl + shift + u
-    st -e /home/naim/.script/pacfzf
+    xterm -e "/home/naim/.script/pacfzf ; read"
 ctrl + shift + y
-    st -e /home/naim/.script/yayfzf
+    xterm -e "/home/naim/.script/yayfzf ; read"
 
 #terminal emulator
 alt + Return
@@ -35,14 +35,13 @@ alt + p
 
 # make sxhkd reload its configuration files:
 alt + Escape
-	pkill -USR1 -x sxhkd && pkill -USR1 -x bspc && pkill -USR1 -x picom
-
+	pkill -USR1 -x sxhkd && pkill -USR1 -x bspc
 alt + shift + p
     pkill -USR1 polybar
 
 #sound control
-ctrl + alt + shift + {minus,equal}
-    sound {-,+}10%
+# ctrl + alt + shift + {minus,equal}
+#     sound {-,+}10%
 
 alt + {minus,equal}
     amixer set Master 5%{-,+} 
@@ -57,14 +56,12 @@ alt + F1
 
 #screenshot 
 
+Print
+    xfce4-screenshooter
+
 # Print
 #     scrot ~/screenshot/$(date --iso-8601='seconds').png; notify-send "screenshot has been taken" 
 
-#screen lock and power related stuffs
-# super + l
-#     xflock4
-# alt + shift + s
-#     i3exit $(cat ~/.scripts/exit | dmenu)&
 
 # app shortcut
 
@@ -78,18 +75,9 @@ alt + F4
 # pdf opener
 
 alt + F5
-    zathura ~/../mznaim/books/$(ls /home/mznaim/books| dmenu -i -l 15)&
+    $HOME/.script/books.sh
 
 # key bindings for rhythmbox music player
 
 super + {space, n, b, minus, equal}
     rhythmbox-client { --play-pause, --next, --previous , --volume-down, --volume-up}
-
-
-
-
-
-
-# testing
-
-
