@@ -11,8 +11,8 @@
 ##
 # wm/de independent hotkeys
 #
-ctrl + shift + x
-    $HOME/.script/power.sh
+# ctrl + shift + x
+#     $HOME/.script/power.sh
 # lock screen with blur lock
 ctrl + shift + l
     $HOME/.script/lock.sh
@@ -30,7 +30,7 @@ alt + Return
 #     /* st */
 
 # program launcher
-alt + p
+ctrl + alt + p
     dmenu_run -i -l 10 -p "Run"
 
 # make sxhkd reload its configuration files:
@@ -48,8 +48,8 @@ alt + {minus,equal}
 
 # ctrl + shift + m
 #     amixer -q -D pulse sset Master toggle ; ~/.scripts/muteNotification.sh
-alt + F9
-    pavucontrol&
+# alt + F9
+#     pavucontrol&
 
 alt + F1 
     chromium
@@ -81,3 +81,25 @@ alt + F5
 
 super + {space, n, b, minus, equal}
     rhythmbox-client { --play-pause, --next, --previous , --volume-down, --volume-up}
+
+
+
+# testing rofi
+#
+# New app launcher
+alt + p
+    ~/.config/rofi/launchers/misc/launcher.sh
+    
+# New power menu
+ctrl + shift + x
+    ~/.config/rofi/powermenu/powermenu.sh
+
+# switch sink port from lineout to headphones
+#
+alt + F8
+    pacmd set-sink-port alsa_output.pci-0000_00_1b.0.analog-stereo analog-output-headphones
+
+# change the card profile to duplex
+# default audio card and profile
+alt + F9
+    pacmd set-card-profile 0 output:analog-stereo+input:analog-stereo
