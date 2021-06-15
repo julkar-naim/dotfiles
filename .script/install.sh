@@ -8,7 +8,7 @@
 # @description : install needed packages
 ######################################################################
 
-yay -Sy sdfsdf google-chrome telegram-desktop teamviewer wps-office discord redshift xdman thunar nautilus flameshot openbangla-keyboard-bin wine clang gvim qbittorrent nodejs python python-pip npm polybar --noconfirm
+yay -Syu sdfsdf google-chrome telegram-desktop teamviewer wps-office discord redshift xdman thunar nautilus flameshot openbangla-keyboard-bin wine clang gvim qbittorrent nodejs python python-pip npm polybar i3lock --noconfirm
 
 
 
