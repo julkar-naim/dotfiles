@@ -12,6 +12,8 @@ setxkbmap -option caps:swapescape &
 
 run telegram-desktop &
 run ibus-daemon &
-run nitrogen --restore &
+#run nitrogen --restore &
 run xfce4-clipman &
-run redshift-gtk &
+run redshift &
+# run qbittorrent &
+ibus-daemon --daemonize --xim &

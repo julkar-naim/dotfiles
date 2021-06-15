@@ -8,7 +8,7 @@
 # @description : For my book library
 ######################################################################
 
-dir='/home/mznaim/books/'
+dir='/media/naim/Data/books/'
 book=`ls $dir | dmenu -i -l 15`
 
 if [ -z $book ]; then

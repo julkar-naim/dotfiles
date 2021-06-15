@@ -17,6 +17,7 @@ Plug 'https://github.com/octol/vim-cpp-enhanced-highlight'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://github.com/joshdick/onedark.vim'
 Plug 'preservim/nerdtree'
+Plug 'mattn/emmet-vim'
 
 
 call plug#end()
@@ -149,6 +150,8 @@ inoremap {<CR> {<CR>}<C-o>O
 " let g:airline_theme='atomic' " other similar themes (biogoo, lucius)
 let g:airline_theme='lucius' 
 
+set guifont=jetbrainsMono\ 11
+
 noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
 inoremap <C-H> <C-W>
@@ -178,6 +181,8 @@ nnoremap <silent> <F3> :NERDTreeToggle<CR>
 "        ░░██    ██░░██     ██ ░░██    ██
 "         ░░██████  ░░███████   ░░██████ 
 "          ░░░░░░    ░░░░░░░     ░░░░░░  
+
+
 
 
  highlight signcolumn ctermbg=NONE
@@ -345,3 +350,6 @@ nnoremap <silent> <F3> :NERDTreeToggle<CR>
  " Resume latest coc list.
  nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+
+" let g:user_emmet_install_global = 0
+" autocmd FileType html,css,js EmmetInstall

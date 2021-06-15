@@ -14,14 +14,20 @@ alias ls='ls --color=auto'
 alias ll='ls --color=auto -la'
 alias grep='grep --color=auto'
 alias clip='xsel -ib'
+alias counter='\.\/counter'
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 # config config --local status.showUntrackedFiles no
-# alias bc='vim ~/.config/bspwm/bspwmrc'
+alias bc='vim ~/.config/bspwm/bspwmrc'
 alias sx='vim ~/.config/sxhkd/sxhkdrc'
 alias pc='vim ~/.config/polybar/config'
 alias nvimrc='nvim ~/.config/nvim/init.vim'
 alias lamp='sudo /opt/lampp/lampp'
-alias vim='nvim'
+alias gin='ranger ~/Downloads/Telegram\ Desktop'
+alias ff='~/.script/file_finder_opener.sh'
+alias at='atcoder-tools'
+alias att='g++ main.cpp && at test'
+alias reboot='systemctl reboot -i'
+#alias vim='nvim'
 
 
 banner () {

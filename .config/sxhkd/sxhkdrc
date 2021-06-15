@@ -25,9 +25,7 @@ ctrl + shift + y
 
 #terminal emulator
 alt + Return
-    urxvt
-    # st
-#     /* st */
+	st
 
 # program launcher
 ctrl + alt + p
@@ -52,13 +50,14 @@ alt + {minus,equal}
 #     pavucontrol&
 
 alt + F1 
-    chromium
+    google-chrome-stable
 
 #screenshot 
 
+# Print
+#     xfce4-screenshooter
+# ctrl + shift + Print
 Print
-    xfce4-screenshooter
-ctrl + shift + Print
     $HOME/.script/ss.sh
 
 # Print
@@ -111,4 +110,4 @@ alt + i
 Pause
     systemctl suspend
 ctrl + alt + m
-    ~/mic.sh
+    pactl set-source-mute 2 toggle && notify-send "toggle"

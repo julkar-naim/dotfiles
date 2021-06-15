@@ -7,3 +7,5 @@ set guioptions-=r "scrollbar"
 set lines=999
 set columns=999
 
+map <C-n> :tabn <cr>
+map <C-p> :tabp <cr>
