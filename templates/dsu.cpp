@@ -30,6 +30,9 @@ struct DSU {
         v = find_root(v);
         return _sz[v];
     }
+    bool same (int u, int v) {
+        return find_root(u) == find_root(v);
+    }
 };
 
 signed main () {

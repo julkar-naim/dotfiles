@@ -11,11 +11,11 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export BSPWM_SOCKET="/tmp/bspwm-socket"
 export PANEL_HEIGHT=25
 export XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg
-export GUI_EDITOR=/usr/bin/micro-st
+export GUI_EDITOR=/usr/bin/gvim
 export BROWSER=/usr/bin/google-chrome-stable
 export TERMINAL=/usr/bin/sterminal
-export QT_QPA_PLATFORMTHEME="qt5ct"
-export EDITOR=/usr/bin/micro
+export QT_QPA_PLATFORMTHEME="gtk2"
+export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/micro
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
@@ -37,3 +37,6 @@ unset TERMCAP
 
 # Man is much better than us at figuring this out
 unset MANPATH
+
+export FZF_DEFAULT_COMMAND='fd --type f --exclude node_modules'
+

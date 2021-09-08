@@ -1,3 +1,4 @@
+let g:polyglot_disabled = ['jsx']
 
 call plug#begin('~/.vim/plugged')  " The plugins goes here
 Plug 'yuezk/vim-js'
@@ -18,8 +19,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://github.com/joshdick/onedark.vim'
 Plug 'preservim/nerdtree'
 Plug 'mattn/emmet-vim'
-
-
+Plug 'tomasr/molokai'
+" Plug 'ludovicchabant/vim-gutentags'
+Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
+Plug 'romgrk/doom-one.vim'
 call plug#end()
 
 
@@ -150,13 +153,12 @@ inoremap {<CR> {<CR>}<C-o>O
 " let g:airline_theme='atomic' " other similar themes (biogoo, lucius)
 let g:airline_theme='lucius' 
 
-set guifont=jetbrainsMono\ 11
+set guifont=jetbrainsMono\ 10.5
 
 noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
 inoremap <C-H> <C-W>
 set cmdheight=1
-imap <C-BS> <C-W>
 
 "" NERDTree configuration
 let g:NERDTreeChDirMode=2
@@ -353,3 +355,10 @@ nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
 " let g:user_emmet_install_global = 0
 " autocmd FileType html,css,js EmmetInstall
+imap <C-BS> <C-W>
+set backspace=indent,eol,start
+highlight LineNr ctermfg=grey
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+let g:js_file_import_use_fzf = 1
+let g:js_file_import_package_first = 0
+colorscheme onedark

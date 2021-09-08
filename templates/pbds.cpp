@@ -8,19 +8,10 @@ template<class T> using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, t
 
 
 signed main(){
-    ordered_set<pair<int, int>> oset;
-
-    /* oset.insert({1, 1}); */
-    /* oset.insert({1, 2}); */
-    /* oset.insert({1, 3}); */
-    /* oset.insert({2, 1}); */
+    ordered_set<pair<int,int>> oset;
+    oset.insert({2, 0});
     oset.insert({2, 1});
-
-    int order = oset.order_of_key({1, 1});
-    cout << order << endl;
-
+    oset.insert({3, 0});
+    oset.insert({3, 1});
+    cout << oset.order_of_key({3, 0});
 }
-
-
-
-// pbds find_by_order is zero indexed based

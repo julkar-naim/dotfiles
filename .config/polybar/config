@@ -20,17 +20,40 @@
 ;background = ${xrdb:color0:#222}
 ;background = #1E2127
 ;background = #222e32
-background = #162832
-background-alt = #444
+;background = #162832
+;background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 ;foreground = #dfdfdf
-foreground = #bac6c4
-foreground-alt = #555
+;foreground = #bac6c4
+;foreground-alt = #555
 ;primary = #ffb52a
-primary = #01A3A7
+;primary = #01A3A7
 ;secondaky = #e60053
-focused = #66CD00
-alert = #bd2c40
+;focused = #66CD00
+;alert = #bd2c40
+
+[colors]
+color1              = ${xrdb:color1}
+color2              = ${xrdb:color2}
+color3              = ${xrdb:color3}
+color4              = ${xrdb:color4}
+color5              = ${xrdb:color5}
+color6              = ${xrdb:color6}
+color7              = ${xrdb:color7}
+color8              = ${xrdb:color8}
+color9              = ${xrdb:color9}
+color10             = ${xrdb:color10}
+color11             = ${xrdb:color11}
+color12             = ${xrdb:color12}
+color13             = ${xrdb:color13}
+color14             = ${xrdb:color14}
+color15             = ${xrdb:color15}
+background          = ${xrdb:background}
+foreground          = ${xrdb:foreground}
+primary             = ${xrdb:color9}
+foreground-alt      = ${colors.color4}
+secondary           = ${colors.color5}
+alert               = ${colors.color3}
 
 [bar/default]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -44,13 +67,13 @@ fixed-center = false
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-; bottom border color 
+;bottom border color
 
 line-size = 0
 line-color = #f00
 
 ; border-size = 4
-; border-color = #00000000
+; border-color = ${colors.foreground}
 
 padding-left = 0
 padding-right = 2
@@ -61,16 +84,16 @@ module-margin-right = 2
 
 
 ;font-0 = Meslo LG M Regular Nerd Font Complete:pixelsize=10;1
-font-0 = SF Pro Display:style=Regular:pixelsize=10;+2
+font-0 = SF Compact Display:style=Medium:pixelsize=10;+2
 ;font-0 = JetbrainsMono:pixelsize=10;1
 font-1 = DejavuSansMono:pixelsize=9;+2
-;font-1 = FontAwesome:style=Regular:pixelsize=12.5;+3
+font-2 = FontAwesome:style=Regular:pixelsize=11;+1
 
 
 
 modules-left = bspwm 
-;modules-center = 
-modules-right =  eth wlan filesystem alsa memory cpu temperature date 
+;modules-center = date
+modules-right =  eth wlan filesystem alsa memory cpu temperature date
 
 tray-position = center
 tray-padding = 2
@@ -123,28 +146,33 @@ label-unmounted-foreground = ${colors.foreground-alt}
 type = internal/bspwm
 
 
-;ws-icon-0 = I;
-;ws-icon-1 = II;
-;ws-icon-2 = III;
-;ws-icon-3 = IV;
-;ws-icon-4 = V;
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;
+ws-icon-4 = V;
+ws-icon-5 = VI;
+;ws-icon-6 = VII;
+;ws-icon-7 = VII;
+;ws-icon-8 = IX;
+;ws-icon-9 = X;
 
 
-label-focused = %name%
-;label-focused-background = ${colors.background-alt}
-label-focused-background = ${colors.background-alt}
-label-focused-foreground = ${colors.focused}
+label-focused = %icon%
+label-focused-background = #11000000
+label-focused-foreground = ${colors.foreground-alt}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
-label-occupied = %name%
+label-occupied = %icon%
+;lable-occuupied-foreground = ${colors.}
 label-occupied-padding = 2
 
-label-urgent = %name%!
+label-urgent = %icon%!
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
-label-empty = %name%
+label-empty = %icon%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
