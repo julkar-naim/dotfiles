@@ -10,11 +10,12 @@ function run {
 
 setxkbmap -option caps:swapescape &
 xset r rate 250 50 &
+albert&
 
 # run telegram-desktop &
 run ibus-daemon &
 #run nitrogen --restore &
 run redshift &
-# run picom &
+run picom &
 # run qbittorrent &
 ibus-daemon --daemonize --xim &

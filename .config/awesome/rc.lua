@@ -20,6 +20,8 @@ require("awful.hotkeys_popup.keys")
 local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 local todo_widget = require("awesome-wm-widgets.todo-widget.todo")
 local net_speed_widget = require("awesome-wm-widgets.net-speed-widget.net-speed")
+local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
+local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -304,11 +306,19 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+            cpu_widget({
+                width = 50,
+                step_width = 2,
+                step_spacing = 0,
+                color = '#434c5e'
+            }),
+            ram_widget(),
             net_speed_widget(),
             todo_widget(),
             volume_widget {
                 widget_type = 'arc',
             },
+
             mykeyboardlayout,
             wibox.widget.systray(),
             mytextclock,
@@ -579,10 +589,10 @@ awful.rules.rules = {
         rule = { class = "TelegramDesktop" },
         properties = { floating = true }
     },
-    -- {
-    --     rule = { class = "google-chrome-stable" },
-    --     properties = { tag = "1"}
-    -- }
+    {
+        rule = { class = "google-chrome-stable" },
+        properties = { maximized_horizontal = true, maximized_vertical = true, tag = tagIcon[1] }
+    },
     -- Maximized clients
     {
         rule = { class = "Gvim" },
@@ -702,6 +712,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Autostarts stuffs!!
 
 awful.spawn.with_shell("sxhkd&")
+awful.spawn.with_shell("~/.script/.fehrc")
 awful.spawn.with_shell("~/.config/bspwm/autostart.sh")
 -- awful.spawn.with_shell("~/.script/feh.sh")
 

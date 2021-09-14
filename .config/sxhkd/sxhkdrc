@@ -88,8 +88,8 @@ ctrl + shift + {space, n, b, minus, equal}
 # testing rofi
 #
 # New app launcher
-alt + p
-    ~/.config/rofi/launchers/misc/launcher.sh
+# alt + p
+#     ~/.config/rofi/launchers/misc/launcher.sh
     
 # New power menu
 ctrl + shift + x

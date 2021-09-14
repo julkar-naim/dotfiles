@@ -3,7 +3,9 @@ export OSH=/home/naim/.oh-my-bash
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
-OSH_THEME="bakke"
+OSH_THEME="powerline-multiline"
+# OSH_THEME="sexy"
+# OSH_THEME="mairan"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"

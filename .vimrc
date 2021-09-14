@@ -153,7 +153,7 @@ inoremap {<CR> {<CR>}<C-o>O
 " let g:airline_theme='atomic' " other similar themes (biogoo, lucius)
 let g:airline_theme='lucius' 
 
-set guifont=jetbrainsMono\ 10.5
+set guifont=jetbrainsMono\ 11
 
 noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
@@ -362,3 +362,4 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 let g:js_file_import_use_fzf = 1
 let g:js_file_import_package_first = 0
 colorscheme onedark
+set nowrap
