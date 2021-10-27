@@ -20,7 +20,9 @@ Plug 'https://github.com/joshdick/onedark.vim'
 Plug 'preservim/nerdtree'
 Plug 'mattn/emmet-vim'
 Plug 'tomasr/molokai'
+Plug 'https://github.com/uiiaoo/java-syntax.vim'
 " Plug 'ludovicchabant/vim-gutentags'
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
 Plug 'romgrk/doom-one.vim'
 call plug#end()
@@ -141,6 +143,7 @@ autocmd BufWinEnter *.cpp call cursor(13, 5)
 " One script for all language program runner
 
 autocmd vimEnter * map <F8> :w <cr>:!~/.script/cpp_runner.sh % <cr>
+autocmd vimEnter * map <F9> :w <cr>:!~/java_runner.sh <cr>
 
 autocmd BufWritePost .Xresources :!xrdb -merge .Xresources
 
@@ -153,7 +156,7 @@ inoremap {<CR> {<CR>}<C-o>O
 " let g:airline_theme='atomic' " other similar themes (biogoo, lucius)
 let g:airline_theme='lucius' 
 
-set guifont=jetbrainsMono\ 11
+set guifont=CascadiaCodePL\ 11
 
 noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
