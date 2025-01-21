@@ -8,6 +8,7 @@
     fortune
     cowsay
     wpsoffice
+    vlc
     #jetbrains.clion
     # flatpak
     #skypeforlinux # won't work other than NixOS

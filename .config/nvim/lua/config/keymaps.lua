@@ -9,3 +9,5 @@ map("i", "<C-BS>", "<C-w>", { noremap = true, silent = true, desc = "Ctrl backsp
 map("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>", { desc = "Toggle debugger breakpoint" })
 
 map("n", "<leader>dr", "<cmd> DapContinue <CR>", { desc = "Start or continue the debugger" })
+
+map("n", "<leader>dc", "<cmd>!clang++ --debug -std=c++17 %  <CR>", { desc = "Compile source for debugging" })
